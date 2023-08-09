@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(cirle at center, #e9e2e2e5 100%, #fff 50%)
+}
+
+h1 {
+  @apply text-center text-3xl text-white;
+  text-shadow: 4px 4px 4px rgb(254, 255, 255), 0px 0px 1px #305accd8, 0px 0px 2px #ffffffa9;
+}
+
+nav {
+  margin: 27px auto 0;
+  width: 590px;
+  height: 50px;
+  @apply bg-slate-400 rounded-lg relative;
+}
+
+nav:hover {
+  box-shadow: 5px 5px 5px 5px blue;
+}
+
+nav a {
+  @apply inline-block relative no-underline text-center text-white;
+  font-size: 15px;
+  line-height: 50px;
+  height: 100%;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+nav .animation {
+  @apply absolute h-full mt-0 z-0 rounded-lg;
+  transition: all .3s ease 0s;
+}
+
+a:nth-child(1) {
+  width: 100px;
+}
+
+a:nth-child(2) {
+  width: 110px;
+}
+
+a:nth-child(3) {
+  width: 100px;
+}
+
+a:nth-child(4) {
+  width: 160px;
+}
+
+a:nth-child(5) {
+  width: 0px;
+}
+
+nav .start-home,
+a:nth-child(1):hover~.animation {
+  left: 0;
+  width: 110px;
+  background-color: #1abc9c;
+}
+
+nav .start-about,
+a:nth-child(2):hover~.animation {
+  width: 110px;
+  left: 100px;
+  background-color: #e74c3c;
+}
+
+nav .start-blog,
+a:nth-child(3):hover~.animation {
+  width: 100px;
+  left: 210px;
+  background-color: #3498db;
+}
+
+nav .start-portefolio,
+a:nth-child(4):hover~.animation {
+  width: 160px;
+  left: 310px;
+  background-color: #9b59b6;
+}
+
+nav .start-contact,
+a:nth-child(5):hover~.animation {
+  width: 120px;
+  left: 470px;
+  background-color: #e67e22;
+}
+
+div {
+  top: 0;
+}
